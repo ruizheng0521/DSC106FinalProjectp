@@ -1,0 +1,70 @@
+body, html{
+    background-image: linear-gradient(#a7d1ae, #943828);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.top{
+    margin-top: 10px;
+    background-color: black;
+    overflow: hidden;
+    position: static;
+}
+
+.title{
+    width:30%;
+    height: 95%;
+    margin-left: 1%;
+    margin-top: 13px;
+    text-align: center;
+    border: 6px double #8d250a;
+    float: left;
+}
+
+.title h2{
+    color: white;
+    clear:left;
+}
+
+.nav-bar{
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-bar li{
+    padding: 22px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 20px;
+    display: block;
+    float: right;
+}
+
+.nav-bar li:hover{
+    border: 4px double #8d250a;
+}
+
+.nav-bar a{
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:active{
+    color: none;
+}
+
+.content{
+    border: 1px solid white;
+    height: 700px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+h3{
+    text-align: center;
+}
