@@ -1,10 +1,12 @@
 function initViz() {
     var containerDiv = document.getElementById("vizContainer"),
     url1 = "https://public.tableau.com/views/Deforestration/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link";
-    url2 = "https://public.tableau.com/shared/3G5X4TK2P?:display_count=y&:origin=viz_share_link"
+    url2 = "https://public.tableau.com/shared/3G5X4TK2P?:display_count=y&:origin=viz_share_link";
+    url3 = "https://public.tableau.com/views/Deforestationshare/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link";
 
     var world_viz = new tableau.Viz(worldViz, url1);
     var deforestation_viz = new tableau.Viz(deforestationViz, url2);
+    var cause_Viz = new tableau.Viz(causeViz, url3)
 
     drawAmazon();
 }
@@ -16,7 +18,10 @@ function drawAmazon(){
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            type: 'pie'
+            type: 'pie',
+            style: {
+                fontFamily: 'Arial',
+            }
         },
         title: {
             text: 'Amazon Rainforest Share Between Countries'
@@ -82,7 +87,10 @@ function drawAmazon(){
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            type: 'pie'
+            type: 'pie',
+            style: {
+                fontFamily: 'Arial',
+            }
         },
         title: {
             text: 'World Oxygen Production Breakdown'
@@ -123,15 +131,18 @@ function drawAmazon(){
         }]
     });
 
-    Highcharts.chart('pie3', {
+    Highcharts.chart('back3', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
             plotShadow: false,
-            type: 'pie'
+            type: 'pie',
+            style: {
+                fontFamily: 'Arial',
+            }
         },
         title: {
-            text: 'Browser market shares in January, 2018'
+            text: 'Amazon Rainforest Species Breakdown'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -146,44 +157,35 @@ function drawAmazon(){
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
+                },
+                showInLegend: true
             }
         },
         series: [{
-            name: 'Brands',
+            name: 'Species',
             colorByPoint: true,
             data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
+                name: 'Plants',
+                y: 40000,
             }, {
-                name: 'Internet Explorer',
-                y: 11.84
+                name: 'Mammals',
+                y: 427
             }, {
-                name: 'Firefox',
-                y: 10.85
+                name: 'Birds',
+                y: 1300
             }, {
-                name: 'Edge',
-                y: 4.67
+                name: 'Reptiles',
+                y: 378
             }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Sogou Explorer',
-                y: 1.64
-            }, {
-                name: 'Opera',
-                y: 1.6
-            }, {
-                name: 'QQ',
-                y: 1.2
-            }, {
-                name: 'Other',
-                y: 2.61
-            }]
+                name: 'Amphibians',
+                y: 400
+            },{
+                name: 'Freshwater Fishes',
+                y: 3000
+            }
+                ]
         }]
     });
 
