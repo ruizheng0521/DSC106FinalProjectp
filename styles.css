@@ -71,10 +71,14 @@ body, html{
 }
 
 
+.question{
+    text-align: center;
+}
+
 .vizContainer{
     opacity: 100%;
     width: 90%;
-    height: 83%;
+    height: 77%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -115,7 +119,7 @@ h1{
     float: left;
     margin-left: 23px;
     margin-right: 23px;
-    margin-top: 4%;
+    margin-top: 3%;
 }
 
 .card:hover{
