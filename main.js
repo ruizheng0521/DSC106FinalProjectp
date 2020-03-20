@@ -11,7 +11,7 @@ function initViz() {
 
 function drawAmazon(){
 
-    Highcharts.chart('pie1', {
+    Highcharts.chart('back1', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -19,7 +19,7 @@ function drawAmazon(){
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares in January, 2018'
+            text: 'Amazon Rainforest Share Between Countries'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -34,49 +34,50 @@ function drawAmazon(){
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
+                },
+                showInLegend: true
             }
         },
         series: [{
-            name: 'Brands',
+            name: 'Forest Shared',
             colorByPoint: true,
             data: [{
-                name: 'Chrome',
-                y: 61.41,
+                name: 'Brazil',
+                y: 58.4,
                 sliced: true,
                 selected: true
             }, {
-                name: 'Internet Explorer',
-                y: 11.84
+                name: 'Peru',
+                y: 12.8
             }, {
-                name: 'Firefox',
-                y: 10.85
+                name: 'Bolivia',
+                y: 7.7
             }, {
-                name: 'Edge',
-                y: 4.67
+                name: 'Colombia',
+                y: 7.1
             }, {
-                name: 'Safari',
-                y: 4.18
+                name: 'Venezuela',
+                y: 6.1
             }, {
-                name: 'Sogou Explorer',
-                y: 1.64
+                name: 'Guyana',
+                y: 3.1
             }, {
-                name: 'Opera',
-                y: 1.6
+                name: 'Suriname',
+                y: 2.5
             }, {
-                name: 'QQ',
-                y: 1.2
+                name: 'French Guyana',
+                y: 1.4
             }, {
-                name: 'Other',
-                y: 2.61
+                name: 'Ecuador',
+                y: 1
             }]
         }]
     });
 
 
-    Highcharts.chart('pie2', {
+    Highcharts.chart('back2', {
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -84,8 +85,9 @@ function drawAmazon(){
             type: 'pie'
         },
         title: {
-            text: 'Browser market shares in January, 2018'
+            text: 'World Oxygen Production Breakdown'
         },
+
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
         },
@@ -99,47 +101,27 @@ function drawAmazon(){
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                }
+                },
+                showInLegend: true
             }
         },
         series: [{
-            name: 'Brands',
+            name: 'Oxygen Production',
             colorByPoint: true,
             data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
+                name: 'Marine Plants',
+                y: 70,
             }, {
-                name: 'Internet Explorer',
-                y: 11.84
+                name: 'Rainforest',
+                y: 28
             }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Sogou Explorer',
-                y: 1.64
-            }, {
-                name: 'Opera',
-                y: 1.6
-            }, {
-                name: 'QQ',
-                y: 1.2
-            }, {
-                name: 'Other',
-                y: 2.61
+                name: 'Others',
+                y: 2
             }]
         }]
     });
-
 
     Highcharts.chart('pie3', {
         chart: {
