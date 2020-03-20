@@ -7,6 +7,10 @@
         <link href= 'styles.css' rel="stylesheet">
         <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
         <script src = 'main.js'></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
         <title>
             DSC106 Project
         </title>
@@ -22,43 +26,74 @@
                 <ul>
                     <li><a href = "#solution"> Call For Action </a></li>
                     <li><a href = "#econ"> Cause </a></li>
-                    <li><a href = "#brazil"> Amazon Rainforest</a></li>
+                    <li><a href = "#amazon"> Amazon Rainforest</a></li>
                     <li><a href = "#deforestation"> Deforestation</a></li>
                     <li><a href = "#world"> World Rainforest</a></li>
                 </ul>
             </nav>
         </div>
         <main>
+            <!-- Display area of rainforest in each country -->
             <div class = "content" id = "world">
                 <h3>
                     WORLD RAINFOREST
                 </h3>
                 <div class ="vizContainer" id = "worldViz"></div>
-                
+                <div class = "vizContainer-small" id = "top5for"> Hello a column chart here</div> 
+                <p> Source: </p>
             </div>
+            
+            <!-- Display deforestation rate in each country -->
             <div class = "content" id = "deforestation">
                 <h3>
-                    Deforestation
+                    DEFORESTATION
                 </h3>
                 <div class ="vizContainer" id = "deforestationViz"></div>
+                <div class = "vizContainerSmall" id = "top5def"> Hello a column chart here</div> 
+                <p> Source: </p> 
             </div>
-            <div class = "content" id = "brazil">
+
+            <!-- Show why is the Amazon Rainforest Important -->
+            <div class = "content" id = "amazon">
                 <h3>
-                    Brazil Rainforest
+                    WHY IS THE AMAZON RAINFOREST IMPORTANT?
                 </h3>
-                <div class ="vizContainer" id = "BrazilViz"></div>
+                <div class = "card " id = 'card1'>
+                    <div class = "cardFront" id = "front1"> <p>Amazon Rainforest is a resouce shared between 7 countries!</p></div>
+                    <div class = "cardBack" id = "back1"> card1</div>
+                </div>
+
+                <div class = "card" id = 'card2'>
+                    <div class = "cardFront" id = "front2"> card2 </div>
+                    <div class = "cardBack" id = "back2"> card2 </div>
+                </div>
+
+                <!-- div class = "amazonViz" id = "pie1"> Resources Shared by </div --> 
+
+                <div class = "card" id = "card3">
+                    <div class = "cardFront" id = "front3"> card3 </div>
+                    <div class = "cardBack" id = "back3"> card3 </div>
+                </div>
+
+                <div class = "card" id = "card4">
+                    <div class = "cardFront" id = "front4"> card4</div> 
+                    <div class = "cardBack" id = "back4"> card4</div> 
+                </div>
+                <p> Source: </p>
             </div>
+
+            <!-- What are the cause of rainforest degredation in Amazon -->
             <div class = "content" id = "econ">
                 <h3>
-                    Economic Reason
+                    CAUSE OF DEFORESTATION
                 </h3>
-                <div class ="vizContainer" id = "ReasonViz"></div>
+                <p> Source: </p>
             </div>
             <div class = "content" id = "solution">
                 <h3>
-                    Solutions
+                    CALL FOR ACTION
                 </h3>
-                <div class ="vizContainer" id = "SolutionViz"></div>
+                <p> Source: </p>
             </div>
         </main>
     </body>
