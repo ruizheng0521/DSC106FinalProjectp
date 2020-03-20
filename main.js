@@ -1,6 +1,6 @@
 function initViz() {
     var containerDiv = document.getElementById("vizContainer"),
-    url1 = "https://public.tableau.com/views/Deforestration/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link";
+    url1 = "https://public.tableau.com/shared/XSC549M3S?:display_count=y&:origin=viz_share_link";
     url2 = "https://public.tableau.com/shared/3G5X4TK2P?:display_count=y&:origin=viz_share_link";
     url3 = "https://public.tableau.com/views/Deforestationshare/Sheet1?:display_count=y&publish=yes&:origin=viz_share_link";
 
